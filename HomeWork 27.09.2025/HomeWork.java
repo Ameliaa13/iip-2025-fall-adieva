@@ -6,7 +6,7 @@ public class HomeWork{
 		String comand = sc.nextLine();
 
 		if(!(comand.equals("encode") || comand.equals("decode"))){
-			System.out.println("Invalid sausage string");
+			System.out.println("Invalid command");
 		} else{
 
 			System.out.println("Введите слово:");
@@ -30,7 +30,7 @@ public class HomeWork{
 					}
 				}
 			} else{
-				for (int i = 0, j =1, k =2; i < slovo.length() && j < slovo.length() && k < slovo.length(); i++, j++, k++){
+				for (int i = 0, j=1, k=2; i < slovo.length() && j < slovo.length() && k < slovo.length(); i++, j++, k++){
 					char letter_i = slovo.charAt(i);
 					char letter_j = slovo.charAt(j);
 					char letter_k = slovo.charAt(k);
@@ -49,12 +49,22 @@ public class HomeWork{
 							k+=2;
 						}
 					} else{
-						res += letter_i;
+						
+						if(k == slovo.length()-1){
+							res += letter_i;
+							res += letter_j;
+							res += letter_k;
+						} else{
+							res += letter_i;
+						}
 					}
 				}
 			} 
-
-			System.out.println(res);
+			if(!slovo.equals(res)){
+					System.out.println(res);
+			} else{
+				System.out.println("Invalid sausage string");
+			}
 		}
 	}
 }
