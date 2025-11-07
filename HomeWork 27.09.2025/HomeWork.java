@@ -24,8 +24,7 @@ public class HomeWork{
 					else if(glasnye2.contains(letter + "")){
 						int index = glasnye2.indexOf(letter);
 						res += letter + "с" + glasnye1.charAt(index);
-					}
-					else{
+					}else{
 						res += letter;
 					}
 				}
@@ -39,8 +38,7 @@ public class HomeWork{
 						i +=2;
 						j+=2;
 						k+=2;
-					} 
-					else if (letter_j == 'с' && glasnye2.contains(letter_i + "") && glasnye1.contains(letter_k + "")) {
+					} else if (letter_j == 'с' && glasnye2.contains(letter_i + "") && glasnye1.contains(letter_k + "")) {
 						int index = glasnye2.indexOf(letter_i);
 						if(letter_k == glasnye1.charAt(index)){
 							res += letter_i;
